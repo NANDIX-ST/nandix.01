@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: e6c0026bbc8064148a547fd480fa02a4
+  productGUID: 742bbd09049ad404e958cf73fb217a9e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: My project (5)
+  productName: nandix
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: My project (5)
+  metroPackageName: nandix
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: My project (5)
+  metroApplicationDescription: nandix
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -704,10 +704,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 64bb7b86-03af-4356-a932-61ec482a4f6c
+  cloudProjectId: fa3ff2d4-5910-4de7-a91e-5e27f7137ae1
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project (5)
+  projectName: nandix
   organizationId: unity_994f64bc5f307329f2db
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
