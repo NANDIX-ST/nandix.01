@@ -9,15 +9,18 @@ public class Player : MonoBehaviour
 
     public bool noChao = false;
   
+    public bool isRun =  false;
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer  spriteRenderer; 
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
 
@@ -46,6 +49,11 @@ public class Player : MonoBehaviour
             //rigidbody2D.AddForce(new Vector2(-velocidade,0));
             spriteRenderer.flipX = true;
             Debug.Log("LeftArrow");
+
+            if (noChao)
+            {
+                isRun = true;
+            }
         }
         
 
@@ -55,6 +63,12 @@ public class Player : MonoBehaviour
             //rigidbody2D.AddForce(new Vector2(velocidade,0));
             spriteRenderer.flipX = false;
             Debug.Log("RightArrow");
+            
+            
+            if (noChao)
+            {
+                isRun = true;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
@@ -64,8 +78,13 @@ public class Player : MonoBehaviour
             Debug.Log("Jump");
         }
 
+        
+        if (noChao == false)
+        {
+            isRun = false;
+        }
      
-
+       animator.SetBool("isRun",isRun);
 
     }
 }
