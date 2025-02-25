@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool noChao = false;
   
     public bool isRun =  false;
+    public bool isJump =  false;
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer  spriteRenderer; 
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "chao")
         {
             noChao = true;
+            isJump = false; 
         }
     }
 
@@ -37,12 +39,15 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "chao")
         {
             noChao = false;
+            isJump = true;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        isRun = false;
+        
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             gameObject.transform.position += new Vector3(-velocidade*Time.deltaTime,0,0);
@@ -77,14 +82,9 @@ public class Player : MonoBehaviour
 
             Debug.Log("Jump");
         }
-
         
-        if (noChao == false)
-        {
-            isRun = false;
-        }
-     
        animator.SetBool("isRun",isRun);
+       animator.SetBool("isJump",isJump);
 
     }
 }
